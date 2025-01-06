@@ -12,3 +12,14 @@ const peoples = {
     { name: "Emily", age: 27, gender: "Female" },
   ],
 };
+
+const filterFemale = (arr) => {
+  const male = arr
+    .filter((person) => person.gender !== "Female")
+    .map((male) => male.name);
+
+  return male;
+};
+
+const result = filterFemale(peoples.people);
+console.log(result); //[ 'John', 'Mike' ]
